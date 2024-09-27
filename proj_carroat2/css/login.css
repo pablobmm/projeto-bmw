@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.menu-fixo {
+    position: absolute; /* Ou use 'fixed' se quiser que o menu siga ao rolar a página */
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Garante que o menu fique sobre as imagens */
+}
+
+.menu-fixo ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-fixo ul li {
+    border: 2px ;
+    display: inline;
+    margin-right: 50px;
+}
+
+.menu-fixo ul li a{
+    border: none;
+    border-radius: 10px;
+    padding:10px 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+/*botão login*/
+.menu-fixo a{/*texto do botão login*/
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#cadastro, #login{
+    color: #60b2e9;
+}
+
+#cadastro:hover {
+    color: blue;
+}
+
+#login:hover{
+    color: blue;
+}
+
+.botao-login button{
+border: none;
+background-color: rgb(0, 183, 255);
+color: rgb(255, 255, 255);
+padding:10px 16px;
+border-radius: 10px;
+}
+.botao-login button a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 500px;
+}
+
+
+/*arthur*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+}
+.box{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%;
+}
+fieldset {
+    border: 3px solid dodgerblue;
+}
+legend{
+    border: 1px solid dodgerblue;
+    padding: 10px;
+    text-align: center;
+    background-color: dodgerblue;
+    border-radius: 8px;
+    color: white;
+}
+.inputbox {
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: dodgerblue;
+}
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+#aceito{
+    margin: 0 8px;
+}
+#submit{
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(24, 1, 153));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#submit:hover{
+    background-image: linear-gradient(to right, rgb(0, 77, 164), rgb(17, 0, 114));
+}
+/*------AQUI TERMINA O FORMULÁRIO*/
+
+
+
+
+.backgroundSection{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+section div.backgroundSection{
+    width: 100%;
+    height: 100%;
+}
+section div.backgroundSection video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

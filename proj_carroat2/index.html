@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>BMW Home</title><!-- nome da aba-->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>    
+    <link rel="stylesheet" href="css/index.css"><!-- referenciando o css-->
+    <link rel="shortcut icon" href="imgs/logo-bmw.png" type="image/x-icon"><!-- logo BMW na aba do site-->
+    <script>
+        /*declaração das variáveis índice e total de slides*/
+        let indiceSlide = 1;
+        const totalSlides = 4;
+    
+        function autoSlide() {
+            indiceSlide++;/*incrementa de 1 em 1 na variável indiceSlide
+            a cada vez que função é chamada*/
+            /*se o índice do slide for maior que o número do total de slides
+            a função retorna o índice para um, voltando para a primeira imagem*/
+            if (indiceSlide > totalSlides) {
+                indiceSlide = 1;
+            }
+    
+            /*seleciona o radio button do valor atual e marca como checked*/
+            /*seu objetivo é trocar a imagem*/
+            document.getElementById('radio' + indiceSlide).checked = true;
+        }
+    
+    
+        /*a função setInterval vai selecionar a função autoSlide
+        em um intervalo de 3 segundos, em seguida a função autoSlide
+        será executada novamente*/
+        setInterval(autoSlide, 3000);// é uma função que irá trocar as imagens a cada 3 segundos
+    </script>
+
+</head>
+<body>
+
+
+<main>
+    <!-- botões-->
+<div id="slider">
+    <input type="radio" name="slider" id="radio1" checked >
+    <input type="radio" name="slider" id="radio2">
+    <input type="radio" name="slider" id="radio3">
+    <input type="radio" name="slider" id="radio4">
+       <!-- slides-->            
+    <div id="slides">
+        <div id="overflow">
+            <div class="inner">
+                    <div class="slide">
+                        <nav class="menu-fixo">  
+                            <div class="menu"> 
+                                <ul>   
+                                    <li><a href="index.html">Inicio</a></li> 
+                                    <li><a href="view/modelos.html">Modelos</a></li>
+                                    <li><a id="cadastro" href="view/cadastro.html" >Cadastre-se</a></b></li>
+                                    <li><a id="login" href="view/login.html" class="botao_entrar">Login</a></li>
+                                </ul>                         
+                            </div>
+                        </nav>
+                        <div class="slide-content"> <!-- SLIDE 1--> 
+                            <div class="img-slide">
+                                <img src="imgs/fotos/pasta-home/bmw.jpg" width="100%" height="500px">
+                            </div>                                   
+                        </div>
+                    </div>
+                    
+                <div class="slide"><!-- SLIDE 2--> 
+                    <div class="slide-content"> 
+                        <div class="img-slide">
+                            <img src="imgs/fotos/pasta-home/x6.jpg" >                               
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide"> <!-- SLIDE 3--> 
+                    <div class="slide-content"> 
+                        <div class="img-slide">
+                            <img src="imgs/fotos/pasta-home/x7.jpg" > 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide"> <!-- SLIDE 4--> 
+                        <div class="slide-content"> 
+                            <div class="img-slide">
+                                <img src="imgs/fotos/pasta-home/fotobmw.png">                 
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- FECHAMENTO DA DIV SLIDER, QUE FAZ OS BOTÕES FUNCIONAREM-->         
+
+            <div id="bullets">
+                <label for="radio1"></label>
+                <label for="radio2"></label>
+                <label for="radio3"></label>
+                <label for="radio4"></label>
+            </div>
+
+<br><br>
+        <div>
+            <div class="title">
+                <h3>Procure e compre</h3>
+                <br>
+                <h1>ENCONTRE O SEU BMW.</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="conteudo-1">
+                <img src="imgs/home/1.webp">
+                <p>Encontre um 0 KM</p>
+                <br>
+            </div>    
+            <div class="botao1">
+                <a href="view/modelos.html">Pesquisar</a>
+            </div>
+        </div>
+        
+
+</main>
+<br><br><br>
+<footer>
+    <br>
+       <img src="imgs/logo-bmw.png" width="50px"><br><br><p> 2024 - BMW - Todos os direitos reservados </p>
+    <br>
+</footer>
+
+<script src='index.js'></script>
+<script src="js/cadastro.js"></script>
+
+</body>
+</html>

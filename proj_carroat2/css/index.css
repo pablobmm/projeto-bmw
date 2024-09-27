@@ -1,0 +1,192 @@
+/*MENU*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Menu fixo sobre o carrossel */
+.menu-fixo {
+    position: absolute; /* Ou use 'fixed' se quiser que o menu siga ao rolar a página */
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Garante que o menu fique sobre as imagens */
+}
+
+.menu-fixo ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-fixo ul li {
+    border: 2px ;
+    display: inline;
+    margin-right: 50px;
+}
+
+.menu-fixo ul li a{
+    border: none;
+    border-radius: 10px;
+    padding:10px 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+/*botão login*/
+.menu-fixo a{/*texto do botão login*/
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#cadastro, #login{
+    color: #60b2e9;
+}
+
+#cadastro:hover {
+    color: blue;
+}
+
+#login:hover{
+    color: blue;
+}
+
+#overflow{
+    width: 100%;/*LARGURA DO SLIDE*/
+    overflow: hidden;/*ESCONDE AS IMAGENS*/
+}
+.slider{
+   
+    max-width: 100%;
+    text-align: center;
+}
+#slider input[type=radio] {
+    display: none;
+}
+#slider label{
+    cursor: pointer;/*MUDA O CURSOR DO MOUSE*/
+    text-decoration: none;
+}
+
+/*TRANSIÇÃO DAS IMAGENS*/
+#radio1:checked ~ #slides .inner {
+    margin-left: 0;/*PONTO INICIAL DA PRIMEIRA IMAGEM*/
+} 
+#radio2:checked ~ #slides .inner {
+    margin-left: -125%;/*PORCENTAGEM QUE A IMAGEM IRÁ PARA ESQUERDA*/
+} 
+#radio3:checked ~ #slides .inner {
+    margin-left: -250%;/*PORCENTAGEM QUE A IMAGEM IRÁ PARA ESQUERDA*/
+} 
+#radio4:checked ~ #slides .inner {
+    margin-left: -375%;/*PORCENTAGEM QUE A IMAGEM IRÁ PARA ESQUERDA*/
+}
+
+/*CONFIGURAÇÕES DO CARROSEL DE IMAGENS*/
+#slides .inner{
+    margin: 0px;/*DISTANCIAMENTO DO SLIDE COM O MENU*/
+    transition:margin-left 800ms cubic-bezier(0.770, 0.000,
+    0.175,1.000);/*TEMPO DE TRANSIÇÃO DAS IMAGENS*/
+    width: 500%;/*POSICIONAMENTO DE CADA IMAGEM AO FAZER A TRANSIÇÃO*/
+    line-height: 1;/*DISTANCIA PARA BAIXO, DO TITULO E DA IMAGEM JUNTOS,EM RELAÇÃO AO MENU*/
+    
+}
+#slides .slide{
+    width: 25%;/*DISTANCIAMENTO DAS IMAGENS PARA O LADO*/
+    float: left;/*O LADO QUE A IMAGEM IRÁ PERCORRER NO CARROSEL*/
+    display: block;
+    color: #fff;
+}
+/*-----------------*/
+
+.img-slide img{/*IMAGENS DO SLIDE*/
+    width: 2100px;/*LARGURA DA IMAGEM*/
+    height: 700px;/*ALTURA DA IMAGEM*/
+}
+
+#bullets{ /*organiza a posição dos botões*/
+    margin: 20px 220px;/*ESPAÇAMENTO VERTICAL E HORIZONTAL EM RELAÇÃO AS IMAGENS*/
+    text-align: center;/*CENTRALIZA*/
+}
+
+#bullets label{ /*personaliza os botões do slide*/
+    cursor: pointer;/*MUDA O CURSOR DO MOUSE*/
+    display: inline-block;
+    width: 15px;/*LARGURA*/
+    height: 15px;/*ALTURA*/
+    border-radius: 100%; /*ajusta a forma*/
+    background: black;/*cor dos botões*/
+    margin: 0 10px;/*espaçamento entre os botões*/
+}
+footer{
+    text-align: center;
+    width: 99.2%;
+    background-color: #000000;
+    padding: 5px;
+    position: absolute;
+    bottom: 20;
+    /*deixa o rodape embaixo*/ 
+}
+footer p{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+footer div img{
+    width: 50px;
+    display: flex;
+    margin: 30px 900px;
+}
+.title{
+    text-align: center;
+}
+.title h3{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.title h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 50vh;           /* Faz o contêiner ocupar toda a altura da tela */
+    flex-direction: column;  /* Coloca o conteúdo em coluna */
+}
+.container p{
+    text-align: center;
+    font-size: 35px;
+    font-family:monospace;
+}
+.botao1 a{
+    border: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding:10px 16px;
+    border-radius: 10px;
+   
+    cursor: pointer;
+    font-size: 28px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.5s ease; /* Suaviza a transição de cor */
+}
+.botao1 a:hover{
+    background-color: #60b2e9;
+    border: none;
+}
+.container .conteudo-1{
+    margin: 30px;
+}
+.container img{
+    height: 200px;
+    width: 600px;
+}
+
+
